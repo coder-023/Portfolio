@@ -3,6 +3,27 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    scroll-behavior: smooth;
+}
+.title{
+    /* border:3px solid red; */
+    box-shadow: 3px 2px 25px 1px;
+    background-color: #000;
+    
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border-radius: 23px;
+    padding: 14px ;
+    margin-top: 23px;
+    font-size: 68px;
+    font-weight: 500;
+    
+    color:rgb(37, 129, 210);
+}
+.m{
+    font-size: 83px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(167, 53, 9);
 }
 body{
     background-color: black;
@@ -14,7 +35,7 @@ body{
     height:100vh;
     /* border: 2px solid rgb(255, 17, 17); */
 
-    background-image: url('./images/background.png');
+    background-image: url('./images/bgimg.jpg');
     background-position:center ; 
     background-size:cover;
 }
@@ -31,6 +52,9 @@ nav{
 }
 .logo{
     width:140px; 
+}
+#sidemenu{
+    margin-top: 23px;
 }
 nav ul li {
     display: inline-block;
@@ -97,6 +121,9 @@ nav ul li a:hover::after{
     display:flex;
     margin:20px 0 40px;
 }
+.tab-contents > ul{
+    columns:3;
+}
 .links{
     margin-right:50px ;
     font-size: 18px;
@@ -124,6 +151,9 @@ nav ul li a:hover::after{
 }
 .tab-contents{
     display: none;
+}
+.tab-contents > ul{
+    text-decoration: none;
 }
 .active-tab{
     display: block;
@@ -277,29 +307,30 @@ nav .close{
 }
 @media only screen and (max-width:600px){
     .header{
-        background-image: url(./images/phone-background.png);
+        background-image: url(./images/bgimgcrop.jpg);
     }
     .header-text{
         margin-top: 50%;
         font-size: 10px;
     }
     .header-text h1{
-        font-size:30px;
+        font-size:52px;
     }
     .header-text p{
-        font-size: 20px;
+        font-size: 39px;
     }
     nav .close{
         display: block;
         
     }
     nav ul{
-        background-color:#ff004f ;
+        background: color rgb(136, 133, 133); 
+        /* opacity:0.5; */
         position:fixed;
         top:0;
         right:-200px;
         width:200px;
-        height:100vh;
+        height:50vh;
         padding-top:50px;
         z-index: 2;
         transition: right 0.2s;
@@ -326,6 +357,13 @@ nav .close{
     .about-col-2{
         font-size: 20px;
     }
+    .tab-contents > ul{
+        columns: 2;
+        margin:20px;
+    }
+    /* .tab-contents > li{
+        margin:20px;
+    } */
     .links{
         font-size: 20px;
         margin-right: 20px;
